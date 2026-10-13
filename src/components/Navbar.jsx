@@ -38,7 +38,7 @@ function Navbar() {
             >
               <img
                 src="/brand-icon-64.png"
-                alt="TaskManagerAI Logo"
+                alt="XFlowAI Logo"
                 className="h-7 w-7 rounded-md object-contain"
               />
               {currentLevel >= 10 && (
@@ -52,7 +52,7 @@ function Navbar() {
             <div className="hidden sm:block">
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-sm tracking-tight text-white">
-                  TaskManager<span className="text-purple-400">AI</span>
+                  XFlow<span className="text-purple-400">AI</span>
                 </span>
                 <span
                   className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider"

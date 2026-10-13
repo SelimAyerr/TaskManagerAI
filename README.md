@@ -1,7 +1,7 @@
-# ⚡ TaskManagerAI
+# ⚡ XFlowAI
 
 <p align="center">
-  <img src="public/brand-icon-512.png" alt="TaskManagerAI Logo" width="120" style="border-radius: 24px; box-shadow: 0 0 35px rgba(168, 85, 247, 0.4);" />
+  <img src="public/brand-icon-512.png" alt="XFlowAI Logo" width="120" style="border-radius: 24px; box-shadow: 0 0 35px rgba(168, 85, 247, 0.4);" />
 </p>
 
 <h3 align="center">Oyunlaştırılmış Akıllı Görev Yöneticisi & Kişisel Yapay Zeka Koçu</h3>
@@ -24,7 +24,7 @@
 
 ## 📖 Genel Bakış
 
-**TaskManagerAI**, klasik yapılacaklar listesi (To-Do) uygulamalarının sıkıcılığını ortadan kaldıran; **RPG oyunlaştırma mekanikleri**, **gelişmiş fütüristik tasarım** ve **Google Gemini Yapay Zeka Koçu** ile donatılmış modern bir üretkenlik platformudur.
+**XFlowAI**, klasik yapılacaklar listesi (To-Do) uygulamalarının sıkıcılığını ortadan kaldıran; **RPG oyunlaştırma mekanikleri**, **gelişmiş fütüristik tasarım** ve **Google Gemini Yapay Zeka Koçu** ile donatılmış modern bir üretkenlik platformudur.
 
 Kullanıcılar her tamamladıkları görev için deneyim puanı (**XP**) kazanır, seviye atlar, benzersiz unvanlar ve auralar açar, başarım rozetleri koleksiyonu yapar ve yapay zekanın sağladığı derin araştırma modülleriyle öğrenme süreçlerini hızlandırır.
 
@@ -170,7 +170,7 @@ npx netlify deploy --prod --dir=dist
 ## 📁 Proje Dizin Yapısı
 
 ```text
-TaskManagerAI/
+XFlowAI/
 ├── public/
 │   ├── _redirects              # Netlify SPA yönlendirme kuralı
 │   ├── brand-icon-*.png        # Çoklu çözünürlük marka ikonları
@@ -227,5 +227,5 @@ Katkı sağlamak isterseniz çok memnun oluruz!
 Bu proje [MIT Lisansı](LICENSE) kapsamında açık kaynak olarak lisanslanmıştır. Dilediğiniz gibi kullanabilir, değiştirebilir ve geliştirebilirsiniz.
 
 <p align="center">
-  Geliştirici için <b>TaskManagerAI</b> ile üretkenliğin zirvesine ulaşın! ⚡
+  Geliştirici için <b>XFlowAI</b> ile üretkenliğin zirvesine ulaşın! ⚡
 </p>

@@ -70,7 +70,7 @@ function Home() {
         {/* Footer Note */}
         <footer className="border-t border-white/5 py-6 text-center text-xs text-slate-500 backdrop-blur-sm">
           <p className="flex items-center justify-center gap-1.5">
-            <span>TaskManager<span className="text-purple-400">AI</span> · Üretkenliğini Seviye Atlat</span>
+            <span>XFlow<span className="text-purple-400">AI</span> · Üretkenliğini Seviye Atlat</span>
             <Zap className="h-3 w-3 text-purple-400" />
           </p>
         </footer>

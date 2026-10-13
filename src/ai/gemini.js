@@ -817,7 +817,7 @@ export async function sendChatMessage(messages, systemInstruction, userMemory = 
  */
 export async function evaluateResearchNotes(taskTitle, subtopicTitle, userNotes) {
   const prompt = `
-Sen TaskManagerAI uygulamasının araştırma ve derinleşme değerlendiricisisin.
+Sen XFlowAI uygulamasının araştırma ve derinleşme değerlendiricisisin.
 Kullanıcı bir görevin alt başlığı üzerinde araştırma yaptı ve öğrendiği bilgileri girdi.
 
 ANA GÖREV: "${taskTitle}"

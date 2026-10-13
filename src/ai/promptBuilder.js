@@ -28,7 +28,7 @@ export function buildSuggestionPrompt(userMemory, count = 1, currentTasks = []) 
   const workStyle = identity.workStyle || "Gece Kuşu";
 
   return `
-Sen TaskManagerAI uygulamasının son derece akıllı, profesyonel ve kişiselleştirilmiş görev mimarısın.
+Sen XFlowAI uygulamasının son derece akıllı, profesyonel ve kişiselleştirilmiş görev mimarısın.
 Görevin, kullanıcının doğrudan mesleğine (${occupation}), ilgi alanlarına (${interestsStr}) ve çalışma stiline (${workStyle}) uygun, SOMUT, PROFESYONEL ve DOĞRUDAN UYGULANABİLİR görevler üretmektir.
 
 KULLANICI BİLGİLERİ (BUNLARI BİREBİR ESAS AL):
@@ -98,7 +98,7 @@ export function buildChatSystemPrompt(userMemory, currentTasks = [], playerStats
     .join("\n");
 
   return `
-Sen "TaskManagerAI" oyunlaştırılmış görev yöneticisinin kişisel yapay zeka asistanı ve koçusun.
+Sen "XFlowAI" oyunlaştırılmış görev yöneticisinin kişisel yapay zeka asistanı ve koçusun.
 
 SENİN KİMLİĞİN:
 - Samimi, bilge, motive edici, hafif esprili ve üretkenliği artıran bir RPG oyun ustası ve akıllı koçsun.

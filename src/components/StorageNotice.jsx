@@ -37,7 +37,7 @@ function StorageNotice() {
       const downloadAnchor = document.createElement("a");
       const dateStr = new Date().toISOString().slice(0, 10);
       downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `taskmanager-ai-yedek-${dateStr}.json`);
+      downloadAnchor.setAttribute("download", `xflow-ai-yedek-${dateStr}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
