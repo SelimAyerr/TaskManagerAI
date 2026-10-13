@@ -27,7 +27,7 @@ function StorageNotice() {
         claimedBadges: localStorage.getItem("claimedBadges") ? JSON.parse(localStorage.getItem("claimedBadges")) : [],
         seenBadges: localStorage.getItem("seenBadges") ? JSON.parse(localStorage.getItem("seenBadges")) : [],
         lastLevel: Number(localStorage.getItem("lastLevel")) || 1,
-        playerName: localStorage.getItem("playerName") || "Selim",
+        playerName: localStorage.getItem("playerName") || "Oyuncu",
         sound_enabled: localStorage.getItem("sound_enabled") || "true",
         userMemory: localStorage.getItem("userMemory") ? JSON.parse(localStorage.getItem("userMemory")) : null,
         geminiActiveModel: localStorage.getItem("geminiActiveModel") || "gemini-2.5-flash",

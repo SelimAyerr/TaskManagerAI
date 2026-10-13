@@ -86,7 +86,10 @@ function ProfileSetupWizard() {
 
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(() => ({
-    name: userMemory.identity.name || "Selim",
+    name:
+      userMemory.identity.name && userMemory.identity.name !== "Oyuncu"
+        ? userMemory.identity.name
+        : "",
     occupation: userMemory.identity.occupation || "Yazılımcı",
     customOccupation: "",
     workStyle: userMemory.identity.workStyle || "Gece Kuşu",

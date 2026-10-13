@@ -4,11 +4,11 @@ const MEMORY_STORAGE = "userMemory";
 
 export const DEFAULT_USER_MEMORY = {
   identity: {
-    name: "Selim",
-    occupation: "Yazılımcı",
-    workStyle: "Gece Kuşu",
-    focusHoursPerDay: 6,
-    interests: ["Yazılım & Web", "Yapay Zeka & Prompting", "Mimari & Optimizasyon"],
+    name: "Oyuncu",
+    occupation: "Üretken Profesyonel",
+    workStyle: "Esnek & Dengeli",
+    focusHoursPerDay: 4,
+    interests: ["Kişisel Gelişim", "Üretkenlik & Planlama"],
   },
   behaviorPatterns: {
     completionRate: 0,

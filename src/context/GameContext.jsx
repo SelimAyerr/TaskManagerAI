@@ -25,7 +25,7 @@ export function GameProvider({ children }) {
   // PLAYER STATE
   // =========================
   const [playerName, setPlayerName] = useState(() => {
-    return localStorage.getItem("playerName") || "Selim";
+    return localStorage.getItem("playerName") || "Oyuncu";
   });
 
   const [soundOn, setSoundOn] = useState(() => isSoundEnabled());
