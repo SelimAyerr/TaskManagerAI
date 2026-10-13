@@ -4,7 +4,7 @@ import { useGame } from "../context/GameContext";
 import { getTaskXp } from "../interfaces/gamification";
 import { Pencil, Sparkles, PlusCircle, Check } from "lucide-react";
 
-function TaskForm() {
+function TaskForm({ onSubmitted }) {
   const { addTask, editingTask, updateTask, setEditingTask } = useGame();
 
   const [title, setTitle] = useState("");
@@ -43,6 +43,7 @@ function TaskForm() {
       setPriority("Orta");
       setIsExpanded(false);
     }
+    if (onSubmitted) onSubmitted();
   };
 
   const handleCancel = () => {
@@ -51,6 +52,7 @@ function TaskForm() {
     setDescription("");
     setPriority("Orta");
     setIsExpanded(false);
+    if (onSubmitted) onSubmitted();
   };
 
   const priorityOptions = [

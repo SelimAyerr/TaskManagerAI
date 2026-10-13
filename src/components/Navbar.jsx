@@ -71,8 +71,8 @@ function Navbar() {
             </div>
           </div>
 
-          {/* Sekme Seçicileri (Tabs) */}
-          <div className="flex items-center rounded-xl border border-white/5 bg-slate-900/60 p-1 backdrop-blur-md">
+          {/* Sekme Seçicileri (Masaüstü) */}
+          <div className="hidden sm:flex items-center rounded-xl border border-white/5 bg-slate-900/60 p-1 backdrop-blur-md">
             <button
               type="button"
               onClick={() => setActiveTab("all")}

@@ -5,7 +5,7 @@ import TaskCard from "./TaskCard";
 import { Search, X, Flame, Zap, Sprout, Trophy, Target, Layers } from "lucide-react";
 
 function TaskList() {
-  const { tasks, activeTab } = useGame();
+  const { tasks, activeTab, setActiveTab, activeTasks, completedTasks } = useGame();
   const [priorityFilter, setPriorityFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -32,7 +32,55 @@ function TaskList() {
   }, [tasks, activeTab, priorityFilter, searchQuery]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3.5">
+      {/* Mobil Öncelikli Sekmeler (Tümü / Aktif / Biten) */}
+      <div className="flex sm:hidden items-center rounded-2xl border border-white/5 bg-slate-900/70 p-1 w-full gap-1 shadow-md">
+        <button
+          type="button"
+          onClick={() => setActiveTab("all")}
+          className={`flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2 text-xs font-bold transition active:scale-95 ${
+            activeTab === "all"
+              ? "bg-white/10 text-white shadow-sm"
+              : "text-slate-400 hover:text-slate-200"
+          }`}
+        >
+          <span>Tümü</span>
+          <span className="rounded-full bg-white/10 px-1.5 py-0.2 text-[10px]">
+            {tasks.length}
+          </span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab("active")}
+          className={`flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2 text-xs font-bold transition active:scale-95 ${
+            activeTab === "active"
+              ? "bg-purple-600/30 text-purple-300 shadow-sm border border-purple-500/30"
+              : "text-slate-400 hover:text-slate-200"
+          }`}
+        >
+          <span>Aktif</span>
+          <span className="rounded-full bg-purple-500/20 px-1.5 py-0.2 text-[10px] text-purple-300">
+            {activeTasks.length}
+          </span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab("completed")}
+          className={`flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2 text-xs font-bold transition active:scale-95 ${
+            activeTab === "completed"
+              ? "bg-emerald-600/30 text-emerald-300 shadow-sm border border-emerald-500/30"
+              : "text-slate-400 hover:text-slate-200"
+          }`}
+        >
+          <span>Biten</span>
+          <span className="rounded-full bg-emerald-500/20 px-1.5 py-0.2 text-[10px] text-emerald-300">
+            {completedTasks.length}
+          </span>
+        </button>
+      </div>
+
       {/* Liste Üstü: Arama ve Hızlı Öncelik Filtreleri */}
       <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
         
