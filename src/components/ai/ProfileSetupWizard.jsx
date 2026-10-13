@@ -166,6 +166,10 @@ function ProfileSetupWizard() {
 
     saveMemory(newMemory);
 
+    if (formData.name.trim()) {
+      localStorage.setItem("playerNameCustomized", "true");
+    }
+
     if (formData.apiKey.trim()) {
       updateApiKey(formData.apiKey.trim());
     }

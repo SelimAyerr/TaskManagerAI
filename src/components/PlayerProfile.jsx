@@ -27,6 +27,7 @@ function PlayerProfile() {
     const trimmed = tempName.trim();
     if (trimmed) {
       setPlayerName(trimmed);
+      localStorage.setItem("playerNameCustomized", "true");
     }
     setIsEditingName(false);
   };
@@ -106,13 +107,18 @@ function PlayerProfile() {
                   <button
                     type="button"
                     onClick={() => {
-                      setTempName(playerName);
+                      setTempName(playerName === "Oyuncu" ? "" : playerName);
                       setIsEditingName(true);
                     }}
-                    className="rounded-lg p-1 text-slate-400 opacity-60 transition hover:bg-white/10 hover:opacity-100"
+                    className={`flex items-center gap-1 rounded-lg px-2 py-1 text-xs transition ${
+                      playerName === "Oyuncu"
+                        ? "bg-purple-500/20 text-purple-300 border border-purple-500/30 hover:bg-purple-500/30"
+                        : "text-slate-400 opacity-60 hover:bg-white/10 hover:opacity-100"
+                    }`}
                     title="İsmini Düzenle"
                   >
-                    <Pencil className="h-3.5 w-3.5" />
+                    <Pencil className="h-3 w-3" />
+                    {playerName === "Oyuncu" && <span>İsim Belirle</span>}
                   </button>
                 </div>
               )}

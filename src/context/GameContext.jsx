@@ -25,7 +25,14 @@ export function GameProvider({ children }) {
   // PLAYER STATE
   // =========================
   const [playerName, setPlayerName] = useState(() => {
-    return localStorage.getItem("playerName") || "Oyuncu";
+    const saved = localStorage.getItem("playerName");
+    const isCustomized = localStorage.getItem("playerNameCustomized") === "true";
+    // Eski ilk test sürümünden tarayıcıda kalmış olabilecek Selim ismini temizle
+    if (saved === "Selim" && !isCustomized) {
+      localStorage.removeItem("playerName");
+      return "Oyuncu";
+    }
+    return saved || "Oyuncu";
   });
 
   const [soundOn, setSoundOn] = useState(() => isSoundEnabled());

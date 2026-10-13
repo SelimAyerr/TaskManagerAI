@@ -59,7 +59,20 @@ export function AIProvider({ children }) {
   const [chatMessages, setChatMessages] = useState(() => {
     try {
       const saved = localStorage.getItem(CHAT_STORAGE_KEY);
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const isCustomized = localStorage.getItem("playerNameCustomized") === "true";
+        if (
+          !isCustomized &&
+          Array.isArray(parsed) &&
+          parsed.length === 1 &&
+          parsed[0].content?.includes("Selam Selim!")
+        ) {
+          localStorage.removeItem(CHAT_STORAGE_KEY);
+        } else {
+          return parsed;
+        }
+      }
     } catch (err) {
       console.error("Chat history okunamadı", err);
     }

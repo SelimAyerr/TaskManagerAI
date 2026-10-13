@@ -34,6 +34,10 @@ export function getUserMemory() {
     if (!raw) return DEFAULT_USER_MEMORY;
 
     const parsed = JSON.parse(raw);
+    const isCustomized = localStorage.getItem("playerNameCustomized") === "true";
+    if (parsed?.identity?.name === "Selim" && !isCustomized) {
+      parsed.identity.name = "Oyuncu";
+    }
     return {
       identity: { ...DEFAULT_USER_MEMORY.identity, ...(parsed.identity || {}) },
       behaviorPatterns: {
